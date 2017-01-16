@@ -13,31 +13,7 @@
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
     
     return @{@"userId": @"user_id",
-             @"DFentId": @"DFent_id",
              @"tokenCode": @"token_code"};
-}
-
-- (NSString *)userId {
-    
-    if (_userId.length) {
-        
-        return _userId;
-    }
-    return [[LoginModel new] user_id];
-}
-
-- (NSString *)tokenCode {
-    
-    if (_tokenCode.length) {
-        
-        return _tokenCode;
-    }
-    return [[LoginModel new] token];
-}
-
-- (NSString *)DFentId {
-    
-    return kAppDFentID;
 }
 
 @end

@@ -2,7 +2,7 @@
 //  DFRequestConfigure.h
 //  
 //
-//  Created by mingwei on 9/29/16.
+//  Created by 全程恺 on 9/29/16.
 //  Copyright © 2016 xmisp. All rights reserved.
 //  保存基础配置、参数、枚举定义
 

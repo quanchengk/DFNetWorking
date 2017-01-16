@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		628C7AD8C40D600926898125 /* libPods-DFNetWorking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD24FFBD7F91D35141655AD /* libPods-DFNetWorking.a */; };
+		B3C227181E2CB48400E7189C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C227171E2CB48400E7189C /* main.m */; };
+		B3C2271B1E2CB48400E7189C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C2271A1E2CB48400E7189C /* AppDelegate.m */; };
+		B3C2271E1E2CB48400E7189C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C2271D1E2CB48400E7189C /* ViewController.m */; };
+		B3C227211E2CB48400E7189C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C2271F1E2CB48400E7189C /* Main.storyboard */; };
+		B3C227231E2CB48400E7189C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3C227221E2CB48400E7189C /* Assets.xcassets */; };
+		B3C227261E2CB48400E7189C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C227241E2CB48400E7189C /* LaunchScreen.storyboard */; };
+		B3C2274D1E2CB54800E7189C /* DFHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C227301E2CB54800E7189C /* DFHttpManager.m */; };
+		B3C2274E1E2CB54800E7189C /* DFHttpValid.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C227321E2CB54800E7189C /* DFHttpValid.m */; };
+		B3C2274F1E2CB54800E7189C /* DFRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C227341E2CB54800E7189C /* DFRequest.m */; };
+		B3C227501E2CB54800E7189C /* DFRequestConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C227361E2CB54800E7189C /* DFRequestConfigure.m */; };
+		B3C227511E2CB54800E7189C /* DFRequestObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C227381E2CB54800E7189C /* DFRequestObject.m */; };
+		B3C227581E2CB54800E7189C /* DFRequestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C227471E2CB54800E7189C /* DFRequestAPI.m */; };
+		B3C227591E2CB54800E7189C /* DFRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C227491E2CB54800E7189C /* DFRequestModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3DD24FFBD7F91D35141655AD /* libPods-DFNetWorking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DFNetWorking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C227131E2CB48400E7189C /* DFNetWorking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DFNetWorking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3C227171E2CB48400E7189C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B3C227191E2CB48400E7189C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B3C2271A1E2CB48400E7189C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B3C2271C1E2CB48400E7189C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B3C2271D1E2CB48400E7189C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B3C227201E2CB48400E7189C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B3C227221E2CB48400E7189C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3C227251E2CB48400E7189C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B3C227271E2CB48400E7189C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3C2272F1E2CB54800E7189C /* DFHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFHttpManager.h; sourceTree = "<group>"; };
+		B3C227301E2CB54800E7189C /* DFHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFHttpManager.m; sourceTree = "<group>"; };
+		B3C227311E2CB54800E7189C /* DFHttpValid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFHttpValid.h; sourceTree = "<group>"; };
+		B3C227321E2CB54800E7189C /* DFHttpValid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFHttpValid.m; sourceTree = "<group>"; };
+		B3C227331E2CB54800E7189C /* DFRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRequest.h; sourceTree = "<group>"; };
+		B3C227341E2CB54800E7189C /* DFRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRequest.m; sourceTree = "<group>"; };
+		B3C227351E2CB54800E7189C /* DFRequestConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRequestConfigure.h; sourceTree = "<group>"; };
+		B3C227361E2CB54800E7189C /* DFRequestConfigure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRequestConfigure.m; sourceTree = "<group>"; };
+		B3C227371E2CB54800E7189C /* DFRequestObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRequestObject.h; sourceTree = "<group>"; };
+		B3C227381E2CB54800E7189C /* DFRequestObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRequestObject.m; sourceTree = "<group>"; };
+		B3C227461E2CB54800E7189C /* DFRequestAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRequestAPI.h; sourceTree = "<group>"; };
+		B3C227471E2CB54800E7189C /* DFRequestAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRequestAPI.m; sourceTree = "<group>"; };
+		B3C227481E2CB54800E7189C /* DFRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRequestModel.h; sourceTree = "<group>"; };
+		B3C227491E2CB54800E7189C /* DFRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFRequestModel.m; sourceTree = "<group>"; };
+		B3C2274A1E2CB54800E7189C /* DFRequestURLInfoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFRequestURLInfoConfig.h; sourceTree = "<group>"; };
+		CF7516EBCD05EAE3BED7F6B6 /* Pods-DFNetWorking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFNetWorking.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DFNetWorking/Pods-DFNetWorking.debug.xcconfig"; sourceTree = "<group>"; };
+		E8E084D23FCCD16BA43C17D5 /* Pods-DFNetWorking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DFNetWorking.release.xcconfig"; path = "Pods/Target Support Files/Pods-DFNetWorking/Pods-DFNetWorking.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B3C227101E2CB48400E7189C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				628C7AD8C40D600926898125 /* libPods-DFNetWorking.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23E450AC2B1B419451B9E4C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DD24FFBD7F91D35141655AD /* libPods-DFNetWorking.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5B9ED1290BC2D060961787AE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF7516EBCD05EAE3BED7F6B6 /* Pods-DFNetWorking.debug.xcconfig */,
+				E8E084D23FCCD16BA43C17D5 /* Pods-DFNetWorking.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B3C2270A1E2CB48400E7189C = {
+			isa = PBXGroup;
+			children = (
+				B3C227151E2CB48400E7189C /* DFNetWorking */,
+				B3C227141E2CB48400E7189C /* Products */,
+				5B9ED1290BC2D060961787AE /* Pods */,
+				23E450AC2B1B419451B9E4C9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B3C227141E2CB48400E7189C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3C227131E2CB48400E7189C /* DFNetWorking.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3C227151E2CB48400E7189C /* DFNetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				B3C227191E2CB48400E7189C /* AppDelegate.h */,
+				B3C2271A1E2CB48400E7189C /* AppDelegate.m */,
+				B3C2271C1E2CB48400E7189C /* ViewController.h */,
+				B3C2271D1E2CB48400E7189C /* ViewController.m */,
+				B3C2272D1E2CB54800E7189C /* DFNetWorking */,
+				B3C2271F1E2CB48400E7189C /* Main.storyboard */,
+				B3C227221E2CB48400E7189C /* Assets.xcassets */,
+				B3C227241E2CB48400E7189C /* LaunchScreen.storyboard */,
+				B3C227271E2CB48400E7189C /* Info.plist */,
+				B3C227161E2CB48400E7189C /* Supporting Files */,
+			);
+			path = DFNetWorking;
+			sourceTree = "<group>";
+		};
+		B3C227161E2CB48400E7189C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3C227171E2CB48400E7189C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3C2272D1E2CB54800E7189C /* DFNetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				B3C2272E1E2CB54800E7189C /* DFHttpManager */,
+				B3C227391E2CB54800E7189C /* DFHttpRequest */,
+			);
+			path = DFNetWorking;
+			sourceTree = "<group>";
+		};
+		B3C2272E1E2CB54800E7189C /* DFHttpManager */ = {
+			isa = PBXGroup;
+			children = (
+				B3C2272F1E2CB54800E7189C /* DFHttpManager.h */,
+				B3C227301E2CB54800E7189C /* DFHttpManager.m */,
+				B3C227311E2CB54800E7189C /* DFHttpValid.h */,
+				B3C227321E2CB54800E7189C /* DFHttpValid.m */,
+				B3C227331E2CB54800E7189C /* DFRequest.h */,
+				B3C227341E2CB54800E7189C /* DFRequest.m */,
+				B3C227351E2CB54800E7189C /* DFRequestConfigure.h */,
+				B3C227361E2CB54800E7189C /* DFRequestConfigure.m */,
+				B3C227371E2CB54800E7189C /* DFRequestObject.h */,
+				B3C227381E2CB54800E7189C /* DFRequestObject.m */,
+			);
+			path = DFHttpManager;
+			sourceTree = "<group>";
+		};
+		B3C227391E2CB54800E7189C /* DFHttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				B3C227461E2CB54800E7189C /* DFRequestAPI.h */,
+				B3C227471E2CB54800E7189C /* DFRequestAPI.m */,
+				B3C227481E2CB54800E7189C /* DFRequestModel.h */,
+				B3C227491E2CB54800E7189C /* DFRequestModel.m */,
+				B3C2274A1E2CB54800E7189C /* DFRequestURLInfoConfig.h */,
+			);
+			path = DFHttpRequest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B3C227121E2CB48400E7189C /* DFNetWorking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3C2272A1E2CB48400E7189C /* Build configuration list for PBXNativeTarget "DFNetWorking" */;
+			buildPhases = (
+				8F8E3268C882A8959F46600B /* [CP] Check Pods Manifest.lock */,
+				B3C2270F1E2CB48400E7189C /* Sources */,
+				B3C227101E2CB48400E7189C /* Frameworks */,
+				B3C227111E2CB48400E7189C /* Resources */,
+				596DAC86E09C02BAD71B85AC /* [CP] Embed Pods Frameworks */,
+				7EE8023B01E6CFEC3A10C7B7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DFNetWorking;
+			productName = DFNetWorking;
+			productReference = B3C227131E2CB48400E7189C /* DFNetWorking.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3C2270B1E2CB48400E7189C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "全程恺";
+				TargetAttributes = {
+					B3C227121E2CB48400E7189C = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = N4QU3P3JZ2;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = B3C2270E1E2CB48400E7189C /* Build configuration list for PBXProject "DFNetWorking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B3C2270A1E2CB48400E7189C;
+			productRefGroup = B3C227141E2CB48400E7189C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3C227121E2CB48400E7189C /* DFNetWorking */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B3C227111E2CB48400E7189C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C227261E2CB48400E7189C /* LaunchScreen.storyboard in Resources */,
+				B3C227231E2CB48400E7189C /* Assets.xcassets in Resources */,
+				B3C227211E2CB48400E7189C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		596DAC86E09C02BAD71B85AC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DFNetWorking/Pods-DFNetWorking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EE8023B01E6CFEC3A10C7B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DFNetWorking/Pods-DFNetWorking-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F8E3268C882A8959F46600B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3C2270F1E2CB48400E7189C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3C2271E1E2CB48400E7189C /* ViewController.m in Sources */,
+				B3C2271B1E2CB48400E7189C /* AppDelegate.m in Sources */,
+				B3C227581E2CB54800E7189C /* DFRequestAPI.m in Sources */,
+				B3C2274D1E2CB54800E7189C /* DFHttpManager.m in Sources */,
+				B3C2274E1E2CB54800E7189C /* DFHttpValid.m in Sources */,
+				B3C2274F1E2CB54800E7189C /* DFRequest.m in Sources */,
+				B3C227511E2CB54800E7189C /* DFRequestObject.m in Sources */,
+				B3C227501E2CB54800E7189C /* DFRequestConfigure.m in Sources */,
+				B3C227181E2CB48400E7189C /* main.m in Sources */,
+				B3C227591E2CB54800E7189C /* DFRequestModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B3C2271F1E2CB48400E7189C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3C227201E2CB48400E7189C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B3C227241E2CB48400E7189C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3C227251E2CB48400E7189C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B3C227281E2CB48400E7189C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B3C227291E2CB48400E7189C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B3C2272B1E2CB48400E7189C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF7516EBCD05EAE3BED7F6B6 /* Pods-DFNetWorking.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = N4QU3P3JZ2;
+				INFOPLIST_FILE = DFNetWorking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xmisp.DFNetWorking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "6108ea07-1c5e-4519-9b9f-5ef90af83b5a";
+				PROVISIONING_PROFILE_SPECIFIER = "XDJ_Development_*";
+			};
+			name = Debug;
+		};
+		B3C2272C1E2CB48400E7189C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8E084D23FCCD16BA43C17D5 /* Pods-DFNetWorking.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = DFNetWorking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.xmisp.DFNetWorking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B3C2270E1E2CB48400E7189C /* Build configuration list for PBXProject "DFNetWorking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3C227281E2CB48400E7189C /* Debug */,
+				B3C227291E2CB48400E7189C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3C2272A1E2CB48400E7189C /* Build configuration list for PBXNativeTarget "DFNetWorking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3C2272B1E2CB48400E7189C /* Debug */,
+				B3C2272C1E2CB48400E7189C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B3C2270B1E2CB48400E7189C /* Project object */;
+}

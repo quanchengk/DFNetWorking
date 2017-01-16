@@ -2,7 +2,7 @@
 //  DFRequestConfigure.m
 //  
 //
-//  Created by mingwei on 9/29/16.
+//  Created by 全程恺 on 9/29/16.
 //  Copyright © 2016 xmisp. All rights reserved.
 //
 
@@ -14,7 +14,8 @@
     
     if (self = [super init]) {
         
-        _baseURL = kBaseURL;
+#warning 设置初始化数据，例如请求的域名，超时时间
+        _baseURL = @"";
         _timeoutInterval = 30;
     }
     

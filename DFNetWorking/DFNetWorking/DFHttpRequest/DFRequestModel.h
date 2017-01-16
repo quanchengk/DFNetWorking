@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <MJExtension/NSObject+MJKeyValue.h>
 
 @interface DFRequestModel : NSObject
 
 @property (copy, nonatomic) NSString *userId;
-@property (copy, nonatomic) NSString *DFentId;
 @property (copy, nonatomic) NSString *tokenCode;
 
 @end

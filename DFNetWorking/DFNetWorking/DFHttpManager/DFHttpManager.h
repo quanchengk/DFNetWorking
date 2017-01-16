@@ -1,20 +1,20 @@
 //
-//  CLIHttpManager.h
-//  ClickNetApp
+//  DFHttpManager.h
+//  
 //
-//  Created by mingwei on 9/29/16.
+//  Created by 全程恺 on 9/29/16.
 //  Copyright © 2016 xmisp. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "CLIRequest.h"
+#import "DFRequest.h"
 
-@interface CLIHttpManager : NSObject
+@interface DFHttpManager : NSObject
 
-+ (CLIHttpManager *)sharedInstance;
++ (DFHttpManager *)sharedInstance;
 
-- (CLIRequest *)addRequestObject:(CLIRequestObject *)requestObj;
+- (DFRequest *)addRequestObject:(DFRequestObject *)requestObj;
 
-- (void)cancelRequest:(CLIRequest *)request;
+- (void)cancelRequest:(DFRequest *)request;
 
 @end

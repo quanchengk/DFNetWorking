@@ -1,5 +1,5 @@
 //
-//  CLIResponse.h
+//  DFResponse.h
 //  
 //
 //  Created by 全程恺 on 16/12/5.
@@ -7,12 +7,12 @@
 //  处理回参
 
 #import <Foundation/Foundation.h>
-#import "CLIRequest.h"
+#import "DFRequest.h"
 
-@interface CLIHttpValid : NSObject
+@interface DFHttpValid : NSObject
 
 //验证请求体有效性
-+ (void)isValidRequest:(CLIRequestObject *)requestObj
++ (void)isValidRequest:(DFRequestObject *)requestObj
                success:(void (^)(NSDictionary *params))success
                failure:(void (^)(NSError *error))failure;
 

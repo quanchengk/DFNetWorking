@@ -1,21 +1,17 @@
 //
 //  DFHttpManager.m
-//  ClickNetApp
+//
 //
 //  Created by 全程恺 on 9/29/16.
 //  Copyright © 2016 xmisp. All rights reserved.
 //
 
 #import "DFHttpManager.h"
-#import "CLIHttpValid.h"
+#import "DFHttpValid.h"
 
-@interface DFHttpManager () <CLIRequestDelegate>
+@interface DFHttpManager () <DFRequestDelegate>
 
 @property (nonatomic, retain) AFHTTPSessionManager  *manager;
-
-//发起的请求控制器，接收到反馈内容的时候，用于判断当前控制器还是不是发起的控制器（展示错误提示的时候要用）。
-@property (nonatomic, strong) id nowController;
-@property (nonatomic, strong) id preController;
 
 @end
 
@@ -28,7 +24,7 @@ static DFHttpManager *sharedInstance = nil;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[self alloc] init];
         
-        CLIRequestConfigure *requestConfig = [CLIRequestConfigure new];
+        DFRequestConfigure *requestConfig = [DFRequestConfigure new];
         
         AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
         
@@ -42,7 +38,6 @@ static DFHttpManager *sharedInstance = nil;
             }
         }];
         
-        //        manager.completionQueue = [self completeQueue];
         sharedInstance.manager = manager;
     });
     return sharedInstance;
@@ -58,16 +53,15 @@ static DFHttpManager *sharedInstance = nil;
     return completeQueue;
 }
 
-- (CLIRequest *)addRequestObject:(CLIRequestObject *)requestObj {
+- (DFRequest *)addRequestObject:(DFRequestObject *)requestObj {
     
-    CLIRequest *request = [CLIRequest new];
+    DFRequest *request = [DFRequest new];
     request.manager = self.manager;
     request.completeDelegate = self;
     request.requestObj = requestObj;
     
-    [CLIHttpValid isValidRequest:requestObj success:^(NSDictionary *params) {
+    [DFHttpValid isValidRequest:requestObj success:^(NSDictionary *params) {
         
-        _preController = self.nowController;
         request.requestObj.requestDictionary = params;
         [request loadData];
     } failure:^(NSError *error) {
@@ -78,9 +72,9 @@ static DFHttpManager *sharedInstance = nil;
     return request;
 }
 
-- (void)cancelRequest:(CLIRequest *)request {
+- (void)cancelRequest:(DFRequest *)request {
     
-    if (request.state == CLIRequestStateCancle) {
+    if (request.state == DFRequestStateCancle) {
         
         return;
     }
@@ -93,29 +87,18 @@ static DFHttpManager *sharedInstance = nil;
     }
 }
 
-- (void)requestDidFinishRequest:(CLIRequest *)request task:(NSURLSessionDataTask *)task {
+- (void)requestDidFinishRequest:(DFRequest *)request task:(NSURLSessionDataTask *)task {
     
-    if ([request.requestObj.URLString containsString:@"api.weixin.qq.com"] || [request.requestObj.URLString containsString:@"api.weibo.com"] ) {
+    if ([request.requestObj.URLString containsString:@"例外"]) {
+#warning 如果需要写不用验证的请求结果，在这里直接返回
         id response = request.responseObj;
         request.requestObj.successBlock(request, response);
     }else {
-        [CLIHttpValid isValidResponse:request.responseObj task:task success:^{
+        
+#warning 这里可以过滤掉冗余的数据结构，如果成功就把拆解后的request.responseObj结构返回出去，数据验证失败的话把失败的原因回调出去
+        [DFHttpValid isValidResponse:request.responseObj task:task success:^{
             
-            id response = request.responseObj[@"data"][@"result"];
-            
-            if (!request) {
-                
-                response = request.responseObj[@"data"];
-            }
-            if (!response) {
-                
-                response = request.responseObj[@"result"];
-            }
-            if (!response) {
-                
-                response = request.responseObj;
-            }
-            request.requestObj.successBlock(request, response);
+            request.requestObj.successBlock(request, request.responseObj);
             
         } failure:^(NSError *error) {
             
@@ -126,59 +109,17 @@ static DFHttpManager *sharedInstance = nil;
     
 }
 
-- (void)requestDidFailRequest:(CLIRequest *)request error:(NSError *)error {
+- (void)requestDidFailRequest:(DFRequest *)request error:(NSError *)error {
     
     if (error.code) {
         
-        UIViewController *vc = self.nowController;
-        
-        if (error.code == CLITipsCodeTokenUnused) {
-            
-            [CLIStoreLoadingView showFailureMessage:[NSString getTipsWithCode:error.code]];
-        }
-        else if ([vc respondsToSelector:@selector(shouldHideServerError)] && [vc performSelector:@selector(shouldHideServerError)]) {
-            
-            //隐藏错误提示
-            CLIStoreLoadingView *loadingView = [CLIStoreLoadingView sharedCLIStoreLoadingView];
-            [loadingView remove];
-        }
-        else if ([vc isEqual:self.preController]) {
-            
-            [CLIStoreLoadingView showFailureMessage:[NSString getTipsWithCode:error.code pre:nil placeTip:error.domain]];
-        }
-        else {
-            
-            CLIStoreLoadingView *loadingView = [CLIStoreLoadingView sharedCLIStoreLoadingView];
-            [loadingView remove];
-        }
+#warning 请求错误，或数据解析错误，可以按需求给出相应错误
     }
     
     if (request.requestObj.failureBlock) {
         
         request.requestObj.failureBlock(request, error);
     }
-}
-
-- (id)nowController {
-    
-    id topObj = [CLIHelper getTopViewController];
-    UIViewController *vc;
-    if ([topObj isKindOfClass:[UITabBarController class]]) {
-        
-        UITabBarController *tabbar = topObj;
-        UINavigationController *nav = tabbar.viewControllers[tabbar.selectedIndex];
-        vc = nav.topViewController;
-    }
-    else if ([topObj isKindOfClass:[UINavigationController class]]) {
-        
-        vc = ((UINavigationController *)topObj).topViewController;
-    }
-    else {
-        
-        vc = topObj;
-    }
-    
-    return vc;
 }
 
 @end
